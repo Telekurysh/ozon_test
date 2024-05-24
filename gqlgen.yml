@@ -1,0 +1,18 @@
+schema:
+  - pkg/graphql/schema.graphqls
+
+exec:
+  filename: pkg/graphql/generated/generated.go
+  package: generated
+
+model:
+  filename: pkg/graphql/models_gen.go
+  package: graphql
+
+resolver:
+  layout: follow-schema
+  dir: pkg/graphql/generated
+  package: generated
+
+autobind:
+  - "github.com/Telekurysh/ozon_test/internal/models"
